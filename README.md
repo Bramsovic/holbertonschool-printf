@@ -1,6 +1,6 @@
 # My Custom printf
 
-Création d'une fonction Printf qui va prendre en compte les caratere suivant :
+Creation of a Printf function which will take into account the following characters:
 c
 s
 %
