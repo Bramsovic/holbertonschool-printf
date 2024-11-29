@@ -2,16 +2,24 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "_printf.h"
+/**
+ * _printf - Fonction personnalisée pour afficher des sorties formatées
+ * @format: Chaîne de format spécifiant le texte à écrire et les arguments
+ * 
+ * Retourne: Nombre total de caractères écrits ou -1 en cas d'erreur
+ */
 int _printf(const char *format, ...)
 {
-int qui_parcours_format = 0;
-int qui_parcours_spe = 0;
-int compteur = 0;
+	int qui_parcours_format = 0;
+	int qui_parcours_spe = 0;
+	int compteur = 0;
 specificateur_t spe[] = {
-{'c', print_char},
-{'s', print_string},
-{'%', print_percent},
-{'\0', NULL} /* Marque la fin du tableau */
+	{'c', print_char},
+	{'s', print_string},
+	{'%', print_percent},
+	{'d', print_decimal},
+	{'i', print_integer},
+	{'\0', NULL} /* Marque la fin du tableau */
 };
 va_list arguments1;
 va_start(arguments1, format); /* Initialiser la liste d'arguments */

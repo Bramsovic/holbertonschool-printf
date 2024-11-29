@@ -1,40 +1,31 @@
 #include "_printf.h"
 #include <stdio.h>
-#include <limits.h> 
-
+/**
+ * main - Point d'entrée pour tester les spécificateurs %c, %s, %%
+ *
+ * Return: Toujours 0
+ */
 int main(void)
-
 {
-    int len;
-    int len2;
-    unsigned int ui;
-    void *addr;
-
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
-    _printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i]\n", len2, len2);
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
-    _printf("Len:[%d]\n", len);
-    printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
-    return (0);
+    int len1, len2;
+/*Test du spécificateur %c*/
+    len1 = _printf("Caractère : %c\n", 'A');
+    len2 = printf("Caractère : %c\n", 'A');
+    printf("Retour _printf: %d, Retour printf: %d\n\n", len1, len2);
+/*Test du spécificateur %s*/
+    len1 = _printf("Chaîne : %s\n", "Bonjour tout les humains!");
+    len2 = printf("Chaîne : %s\n", "Bonjour tout le monde!");
+    printf("Retour _printf: %d, Retour printf: %d\n\n", len1, len2);
+/*Test du spécificateur %% */
+    len1 = _printf("Pourcentage : %%\n");
+    len2 = printf("Pourcentage : %%\n");
+    printf("Retour _printf: %d, Retour printf: %d\n", len1, len2);
+/*Test du spécificateur %d*/
+    len1 = _printf("Entier (%%d) : %d\n", 123);
+    len2 = printf("Entier (%%d) : %d\n", 123);
+    printf("Retour _printf: %d, Retour printf: %d\n\n", len1, len2);
+/*Test du spécificateur %i*/
+    len1 = _printf("Entier (%%i) : %i\n", -456);
+    len2 = printf("Entier (%%i) : %i\n", -456);
+    printf("Retour _printf: %d, Retour printf: %d\n\n", len1, len2);
 }
