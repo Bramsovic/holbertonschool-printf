@@ -1,4 +1,4 @@
-#include "_printf.h"
+#include "main.h"
 #include <string.h>  
 /**
  * print_char - Imprime un caractère

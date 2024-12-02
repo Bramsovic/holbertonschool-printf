@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "_printf.h"
+#include "main.h"
 /**
  * _printf - Fonction personnalisée pour afficher des sorties formatées
  * @format: Chaîne de format spécifiant le texte à écrire et les arguments
