@@ -160,5 +160,3 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ---
 
 Thank you for exploring the `_printf` project! Feel free to contribute, raise issues, or suggest improvements. 😊
-``` 
-
