@@ -5,6 +5,19 @@ Welcome to the **`_printf`** project! This repository contains a custom implemen
 
 ---
 
+## 📑 Table of Contents
+
+1. [📚 Resources](#-resources)  
+2. [⚙️ Project Overview](#️-project-overview)  
+3. [🛠️ Requirements](#️-requirements)  
+4. [🧩 Usage](#️-usage)  
+5. [🔍 Examples](#-examples)  
+6. [📂 File Structure](#-file-structure)  
+7. [📝 Tasks](#-tasks)  
+8. [🛠️ Development and Testing](#️-development-and-testing)  
+9. [📋 Notes and Recommendations](#-notes-and-recommendations)
+---
+
 ## 📚 Resources
 
 Before diving into the code, you may find the following resources helpful:
